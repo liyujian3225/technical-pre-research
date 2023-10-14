@@ -14,6 +14,11 @@ const router = createRouter({
       name: 'login',
       component: () => import('/src/views/login/index.vue'),
     },
+    {
+      path: '/technicalPre',
+      name: 'technicalPre',
+      component: () => import('/src/views/technicalPre/index.vue'),
+    },
   ],
 })
 

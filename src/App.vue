@@ -1,13 +1,15 @@
-<script setup>
-
-</script>
-
 <template>
-  <div>
-
+  <div class="rootViews">
+    <router-view></router-view>
   </div>
 </template>
-
-<style scoped>
-
+<script setup>
+</script>
+<style scoped lang="scss">
+div.rootViews {
+  width: 100vw;
+  height: 100vh;
+}
 </style>
+
+
