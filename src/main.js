@@ -17,6 +17,7 @@ app.use(router)
 //引入ElementPlus
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
+import 'element-plus/theme-chalk/dark/css-vars.css'
 import zhCn from 'element-plus/dist/locale/zh-cn.mjs';
 app.use(ElementPlus, {
   locale: zhCn,

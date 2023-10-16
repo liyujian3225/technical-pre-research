@@ -1,6 +1,7 @@
 <template>
   <el-table
     :data="tableData"
+    height="100%"
     style="width: 100%">
     <el-table-column
       prop="date"
@@ -20,9 +21,9 @@
 </template>
 <script setup>
 
-const tableData = [];
-for(let i in 300) {
-  tableData.push({
+const tableData = ref([]);
+for(let i = 0; i < 300; i++) {
+  tableData.value.push({
     date: "2023-10-14",
     name: "李雨健",
     address: "山西省太原市小店区",
