@@ -6,9 +6,9 @@
     <div class="right">
       <el-switch
         v-model="isDark"
-        inline-prompt
         :active-action-icon="Moon"
         :inactive-action-icon="Sunny"
+        style="--el-switch-on-color: #2c2c2c; --el-switch-off-color: #f2f2f2"
         @change="toggleDark"
       />
     </div>
@@ -34,7 +34,9 @@ div.myHeader {
     font-weight: bold;
   }
   div.right {
-
+    ::v-deep .el-switch__core {
+      border-color: var(--el-border-color);;
+    }
   }
 }
 </style>

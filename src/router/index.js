@@ -45,7 +45,7 @@ const router = createRouter({
           path: '/threeDemo',
           name: 'threeDemo',
           meta: {
-            title: "three模型相关",
+            title: "模型相关",
             requireAuth: true,
             perms: [],
           },

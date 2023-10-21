@@ -1,24 +1,29 @@
 <template>
   <el-menu
-    default-active="1"
+    default-active="/tableDemo"
+    :router="true"
+    :collapse="isCollapse"
     @open="handleOpen"
-    @close="handleClose"
-    :collapse="isCollapse">
-    <el-menu-item index="2">
-      <i class="el-icon-menu"></i>
-      <span slot="title">导航二</span>
-    </el-menu-item>
-    <el-menu-item index="2" disabled>
-      <i class="el-icon-document"></i>
-      <span slot="title">导航三</span>
-    </el-menu-item>
-    <el-menu-item index="3">
-      <i class="el-icon-setting"></i>
-      <span slot="title">导航四</span>
+    @close="handleClose">
+    <el-menu-item
+      v-for="(item, index) in menuList"
+      :index="item.index">
+      <el-icon>
+        <component :is="item.icon"></component>
+      </el-icon>
+      <span slot="title">{{ item.name }}</span>
     </el-menu-item>
   </el-menu>
 </template>
 <script setup>
+import { List, TrendCharts, Management } from '@element-plus/icons-vue'
+
+const menuList = [
+  { name: "表格", icon: List, index: '/tableDemo' },
+  { name: "图表", icon: TrendCharts, index: '/echartDemo' },
+  { name: "模型", icon: Management, index: '/threeDemo' },
+]
+
 const isCollapse = ref(false);
 const handleOpen = (key, keyPath) => {
   console.log(key, keyPath);
