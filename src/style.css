@@ -7,7 +7,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  color-scheme: light dark;
+  /*color-scheme: light dark;*/
   /*
   :root 选择器匹配文档根元素
   color-scheme: 原生支持的配色方案，更改浏览器的默认配色方案
@@ -15,24 +15,6 @@
   color-scheme: normal 未指定任何配色方案 | light | dark | light dark
   accent-color: 可以更改表单元素的默认颜色。
   */
-}
-
-/*
-检测用户是否将系统的主题色设置为亮色或暗色，只和系统设置有关系
-用来自定义其它普通样式
-*/
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
-  }
 }
 
 html, body {

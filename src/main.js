@@ -17,7 +17,8 @@ app.use(router)
 //引入ElementPlus
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
-import 'element-plus/theme-chalk/dark/css-vars.css'
+//暗黑模式css变量
+import 'element-plus/theme-chalk/src/dark/css-vars.scss'
 import zhCn from 'element-plus/dist/locale/zh-cn.mjs';
 app.use(ElementPlus, {
   locale: zhCn,

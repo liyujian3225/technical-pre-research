@@ -1,3 +1,4 @@
+import Layout from '@/layout/index.vue'
 import { createRouter, createWebHashHistory } from 'vue-router';
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
@@ -7,7 +8,7 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      redirect: '/technicalPre',
+      redirect: '/tableDemo',
     },
     {
       path: '/login',
@@ -15,9 +16,42 @@ const router = createRouter({
       component: () => import('/src/views/login/index.vue'),
     },
     {
-      path: '/technicalPre',
-      name: 'technicalPre',
-      component: () => import('/src/views/technicalPre/index.vue'),
+      path: '',
+      component: Layout,
+      redirect: 'tableDemo',
+      children: [
+        {
+          path: '/tableDemo',
+          name: 'tableDemo',
+          meta: {
+            title: "表格分页相关",
+            requireAuth: true,
+            perms: [],
+            keepAlive: true
+          },
+          component: () => import('/src/views/technicalPre/tableDemo/index.vue'),
+        },
+        {
+          path: '/echartDemo',
+          name: 'echartDemo',
+          meta: {
+            title: "echart图表相关",
+            requireAuth: true,
+            perms: [],
+          },
+          component: () => import('/src/views/technicalPre/echartDemo/index.vue'),
+        },
+        {
+          path: '/threeDemo',
+          name: 'threeDemo',
+          meta: {
+            title: "three模型相关",
+            requireAuth: true,
+            perms: [],
+          },
+          component: () => import('/src/views/technicalPre/threeDemo/index.vue'),
+        }
+      ]
     },
   ],
 })
