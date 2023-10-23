@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-import './style.css'
+import './assets/css/style.css'
 
 //环境变量的使用(https://cn.vitejs.dev/guide/env-and-mode.html#env-files)
 //Vite暴露给客户端源码的环境变量对象为import.meta.env，不支持动态设置，在引用它们时请使用完全静态的字符串。
@@ -19,6 +19,7 @@ import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 //暗黑模式css变量
 import 'element-plus/theme-chalk/src/dark/css-vars.scss'
+import './assets/css/custom.scss'
 import zhCn from 'element-plus/dist/locale/zh-cn.mjs';
 app.use(ElementPlus, {
   locale: zhCn,

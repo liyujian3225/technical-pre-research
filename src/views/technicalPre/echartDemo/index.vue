@@ -29,6 +29,7 @@ const initMyChart = () => {
   ];
 
   if (myChart) echarts.dispose(myChart);
+  myChart = echarts.init(document.getElementById("myChart"))
   let option = {
     legend: {
       itemWidth: 10,

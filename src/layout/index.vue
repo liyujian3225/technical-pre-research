@@ -10,7 +10,7 @@
         </el-aside>
         <el-main>
           <el-config-provider :locale="locale">
-            <router-view v-slot="{ Component }">
+            <router-view class="routerView" v-slot="{ Component }">
               <keep-alive>
                 <component
                   v-if="$route.meta.keepAlive"
@@ -37,7 +37,7 @@ const locale = zhCn;
 
 
 </script>
-<style scoped lang="scss">
+<style lang="scss">
 div.layout {
   width: 100%;
   height: 100%;
@@ -49,6 +49,14 @@ div.layout {
     height: calc(100vh - 60px);
     padding: 15px;
     overflow: hidden;
+    .routerView {
+      width: 100%;
+      height: 100%;
+      padding: 15px;
+      box-sizing: border-box;
+      background: var(--my-bg-color);
+      border-radius: 5px;
+    }
   }
 }
 </style>

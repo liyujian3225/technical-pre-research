@@ -27,7 +27,7 @@ const router = createRouter({
             title: "表格分页相关",
             requireAuth: true,
             perms: [],
-            keepAlive: true
+            keepAlive: false
           },
           component: () => import('/src/views/technicalPre/tableDemo/index.vue'),
         },
@@ -38,6 +38,7 @@ const router = createRouter({
             title: "echart图表相关",
             requireAuth: true,
             perms: [],
+            keepAlive: false
           },
           component: () => import('/src/views/technicalPre/echartDemo/index.vue'),
         },
