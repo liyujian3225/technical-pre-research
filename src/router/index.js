@@ -8,7 +8,7 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      redirect: '/tableDemo',
+      redirect: '/threeDemo',
     },
     {
       path: '/login',

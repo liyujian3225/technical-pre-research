@@ -1,7 +1,7 @@
 <template>
   <div class="myHeader">
     <div class="left">
-      <span>技术汇总累计</span>
+      <span>汇总累计</span>
     </div>
     <div class="right">
       <el-switch

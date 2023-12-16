@@ -19,8 +19,8 @@
 import { List, TrendCharts, Management } from '@element-plus/icons-vue'
 
 const menuList = [
-  { name: "表格", icon: List, index: '/tableDemo' },
-  { name: "图表", icon: TrendCharts, index: '/echartDemo' },
+  // { name: "表格", icon: List, index: '/tableDemo' },
+  // { name: "图表", icon: TrendCharts, index: '/echartDemo' },
   { name: "模型", icon: Management, index: '/threeDemo' },
 ]
 
