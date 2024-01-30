@@ -8,7 +8,7 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      redirect: '/threeDemo',
+      redirect: '/modelDemo',
     },
     {
       path: '/login',
@@ -43,14 +43,24 @@ const router = createRouter({
           component: () => import('/src/views/technicalPre/echartDemo/index.vue'),
         },
         {
-          path: '/threeDemo',
-          name: 'threeDemo',
+          path: '/modelDemo',
+          name: 'modelDemo',
           meta: {
             title: "模型相关",
             requireAuth: true,
             perms: [],
           },
-          component: () => import('/src/views/technicalPre/threeDemo/index.vue'),
+          component: () => import('/src/views/technicalPre/modelDemo/index.vue'),
+        },
+        {
+          path: '/tldrawDemo',
+          name: 'tldrawDemo',
+          meta: {
+            title: "绘画白板",
+            requireAuth: true,
+            perms: [],
+          },
+          component: () => import('/src/views/technicalPre/tldrawDemo/index.vue'),
         }
       ]
     },
