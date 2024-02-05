@@ -52,16 +52,6 @@ const router = createRouter({
           },
           component: () => import('/src/views/technicalPre/modelDemo/index.vue'),
         },
-        {
-          path: '/tldrawDemo',
-          name: 'tldrawDemo',
-          meta: {
-            title: "绘画白板",
-            requireAuth: true,
-            perms: [],
-          },
-          component: () => import('/src/views/technicalPre/tldrawDemo/index.vue'),
-        }
       ]
     },
   ],
